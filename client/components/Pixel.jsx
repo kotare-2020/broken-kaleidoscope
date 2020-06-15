@@ -6,32 +6,42 @@ class Pixel extends React.Component {
     state = {
         style: {
             fontFamily: 'Times New Roman',
-            height: '20px',
-            width: '20px',
+            height: '100px',
+            width: '100px',
             backgroundColor:  randomHexColor()
         }
     }
 
    componentDidMount(){
-        setInterval(() => {
-            this.setState({
-                style: {
-                    ...this.state.style,
-                    backgroundColor: randomHexColor()
-                }
-            })
-        }, 2000)
+      this.timer = setInterval(() => this.tick(),1000)
+        //     this.setState({
+        //         style: {
+        //             ...this.state.style,
+        //             backgroundColor: randomHexColor()
+        //         }
+        //     })
+        // }, 2000)
     }
 
     componentWillUnmount(){
-        setInterval(() => {
-            this.setState({
-                style: {
-                    ...this.state.style,
-                    backgroundColor: randomHexColor()
-                }
-            })
-        }, 2000)
+        clearInterval(this.timer)
+        // setInterval(() => {
+        //     this.setState({
+        //         style: {
+        //             ...this.state.style,
+        //             backgroundColor: randomHexColor()
+        //         }
+        //     })
+        // }, 2000)
+    }
+
+    tick(){
+        this.setState({
+            style: {
+                ...this.state.style,
+                backgroundColor: randomHexColor()
+            }
+        })
     }
     
 
