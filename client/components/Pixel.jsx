@@ -21,7 +21,7 @@ style={{
 }}
 
  dodgerblue, cornflowerblue, lightsteelblue from:
- https://www.rapidtables.com/web/css/css-color.html#blue good shit
+ https://www.rapidtables.com/web/css/css-color.html#blue
  */
 
 export default Pixel
