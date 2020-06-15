@@ -7,21 +7,24 @@ class Pixel extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            styles: { backgroundColor: randomHexColor(), height: '20px', width: '20px' }
+        this.state = {  
+            styles: { backgroundColor: randomHexColor(), height: '30px', width: '30px' }
         }
     }
 
     clickHandler = evt => {
         this.setState({
-          styles: { backgroundColor: randomHexColor() }
+          styles: { backgroundColor: randomHexColor(),height: '30px', width: '30px' }
         })
       }
 
-      onClick = this.clickHandler
+     
+      
+      
 
     render() {
-        return (<div style={this.state.styles}>  </div >)
+        return (<div onClick = {this.clickHandler} onMouseEnter = {this.clickHandler} style={this.state.styles}>  
+            </div >)
     }
 }
 
