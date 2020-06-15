@@ -8,18 +8,32 @@ class Pixel extends React.Component {
     style: {
       fontFamily: 'Helvetica',
       backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`,
-      height: '10px',
-      width: '10px',
-      
-    }
+      height: '500px',
+      width: '1px',
+      float: 'center',
+      }
   }
+
+  colorChange = () => {
+    this.setState({
+      style: {
+        backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`,
+        height: `${Math.floor(Math.random() * 1000)}` + 'px',
+        width: `${Math.floor(Math.random() * 30)}` + 'px',
+        float: 'center',
+        fontFamily: 'Helvetica',
+      }
+    })
+    console.log(this.style.width)
+}
+
 
   render() {
 
     return (
 
 
-      <div style={this.state.style}></div>
+      <div onMouseOver={this.colorChange} style={this.state.style}></div>
       
     )
   }
