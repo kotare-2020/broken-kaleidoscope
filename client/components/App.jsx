@@ -1,12 +1,14 @@
 import React from 'react'
-import Pixel from './Pixel.jsx'
+import Pixels from './Pixels.jsx'
 
 const App = () => {
   return (
     <>
-      <Pixel />
+      <Pixels amount='200' />
     </>
   )
 }
 
 export default App
+
+  //something that adds lots of pixel divs

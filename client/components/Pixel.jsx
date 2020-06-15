@@ -1,10 +1,11 @@
 import React from 'react'
 
 const Pixel = props => {
-  return <div style={
-    // dodgerblue, cornflowerblue, lightsteelblue https://www.rapidtables.com/web/css/css-color.html#blue good shit
-    { backgroundColor: 'cornflowerblue', height: '30px', width: '30px' }
+  return <div style={{
+    backgroundColor: 'cornflowerblue', height: '50px', width: '50px'
+  }
   }></div>
 }
+// dodgerblue, cornflowerblue, lightsteelblue https://www.rapidtables.com/web/css/css-color.html#blue good shit
 
 export default Pixel
