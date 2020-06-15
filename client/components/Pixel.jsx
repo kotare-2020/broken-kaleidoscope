@@ -1,11 +1,27 @@
 import React from 'react'
 
-const Pixel = props => {
-  return <div style={{
-    backgroundColor: 'cornflowerblue', height: '50px', width: '50px'
+const randomHexColor = () =>
+  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+
+class Pixel extends React.Component {
+
+  state = {
+    style: {
+      backgroundColor: randomHexColor(), height: '50px', width: '50px'
+    }
   }
-  }></div>
+  render() {
+    return <div style={this.state.style}></div>
+  }
 }
-// dodgerblue, cornflowerblue, lightsteelblue https://www.rapidtables.com/web/css/css-color.html#blue good shit
+
+/*
+style={{
+  backgroundColor: 'cornflowerblue', height: '50px', width: '50px'
+}}
+
+ dodgerblue, cornflowerblue, lightsteelblue from:
+ https://www.rapidtables.com/web/css/css-color.html#blue good shit
+ */
 
 export default Pixel
