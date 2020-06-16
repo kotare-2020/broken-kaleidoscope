@@ -6,7 +6,7 @@ const App = () => {
   // for(let i=0;i < 2000; i++) {
   //    newArray.push(<Pixel/>)
   // }
-  return Array.from({length: ((window.innerWidth / 40) * (window.innerHeight / 40))}, (item, i) => <Pixel key={i}/>)
+  return Array.from({length: ((window.innerWidth / 30) * (window.innerHeight / 30))}, (item, i) => <Pixel key={i}/>)
 }
 
 export default App

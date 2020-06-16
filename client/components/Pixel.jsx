@@ -6,24 +6,34 @@ const randomHexColor = () =>
 class Pixel extends React.Component {
   state = {
     style: {
-      height: '40px',
-      width: '40px',
+      height: '30px',
+      width: '30px',
       backgroundColor: randomHexColor(),
-      animation: '',
-       animationIterationCount: 'infinite'
-    }    
+      animation: 'rainbow-bg infinite 15s linear',
+    }
   }
+
+  resetPixel = () => {
+    this.setState({
+      style: {
+        ...this.state.style, animation: 'rainbow-bg infinite 15s linear'
+      }
+    })
+  }
+
+  // componentDidMount() {
+  //   setInterval(this.resetPixel, 1000)
+  // }
 
   enterEvent = () => {
     this.setState({
       style: {
         ...this.state.style, animation: 'rainbow-bg infinite 5s linear',
-         
       }
     })
   }
-  
-   contextEvent = (evt) => {
+
+  contextEvent = (evt) => {
     evt.preventDefault()
     this.setState({
       style: {
@@ -49,11 +59,15 @@ class Pixel extends React.Component {
     })
   }
 
-
   render() {
     return (
-      <div style={this.state.style} onMouseEnter={this.enterEvent} onContextMenu={this.contextEvent} onDoubleClick={this.doubleEvent} onDragEnter={this.dragEvent} >
-
+      <div
+        style={this.state.style}
+        onMouseEnter={this.enterEvent}
+        onContextMenu={this.contextEvent}
+        onDoubleClick={this.doubleEvent}
+        onDragEnter={this.dragEvent}
+      >
       </div>
     )
   }
