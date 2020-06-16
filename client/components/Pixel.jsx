@@ -4,28 +4,24 @@ import React from 'react'
 
 class Pixel extends React.Component {
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {  
-            styles: { backgroundColor: randomHexColor(), height: '30px', width: '30px' }
-        }
+    this.state = {
+      styles: { backgroundColor: randomHexColor(), height: '30px', width: '30px' }
     }
+  }
 
-    clickHandler = evt => {
-        this.setState({
-          styles: { backgroundColor: randomHexColor(),height: '30px', width: '30px' }
-        })
-      }
+  clickHandler = evt => {
+    this.setState({
+      styles: { backgroundColor: randomHexColor(), height: '30px', width: '30px' }
+    })
+  }
 
-     
-      
-      
-
-    render() {
-        return (<div onClick = {this.clickHandler} onMouseEnter = {this.clickHandler} style={this.state.styles}>  
-            </div >)
-    }
+  render() {
+    return (<div onClick={this.clickHandler} onMouseEnter={this.clickHandler} style={this.state.styles}>
+    </div >)
+  }
 }
 
 
