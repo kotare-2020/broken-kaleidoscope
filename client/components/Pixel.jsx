@@ -8,7 +8,9 @@ class Pixel extends React.Component {
     style: {
       backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`,
       height: '500px',
-      width: '20px',
+      width: '200px',
+      opacity: '0.5',
+      borderRadius: '20%',
 
       }
   }
@@ -18,11 +20,12 @@ class Pixel extends React.Component {
       
       style: {
         backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`,
-        height: `${Math.floor(Math.random() * 10000)}` + 'px',
+        height: `500` + 'px',
         // ${Math.floor(Math.random() * 30)}
-        width: `${Math.floor(Math.random() * 30)}` + 'px',
-        border: '1px  solid red',
+        width: `200` + 'px',
+        opacity: '0.5',
         borderRadius: '20%',
+        position: 'sticky',
       }
     })
 }

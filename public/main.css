@@ -2,6 +2,7 @@ html, body, .viewport {
   width: 100%;
   height: 100%;
   margin: 0;
+  background-color: navajowhite;
 }
 
 #app {
@@ -14,15 +15,25 @@ div {
 }
 
 .spin {
-  position: relative;
-  top: 50%;
-  left: 50%;
+  /* position: fixed; */
+  /* top: 50%;
+  left: 50%; */
   margin:-60px 0 0 -60px;
-  -webkit-animation:spin 4s linear infinite;
-  -moz-animation:spin 4s linear infinite;
-  animation:spin 4s linear infinite;
+  -webkit-animation:spin 1s linear infinite;
+  -moz-animation:spin 1s linear infinite;
+  animation:spin 1s linear infinite;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.trail { /* className for the trail elements */
+  position: absolute;
+  height: 100px; width: 15px;
+  border-radius: 50px;
+  background: aliceblue;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
