@@ -6,25 +6,25 @@ class Pixel extends React.Component {
 
   state = {
     style: {
-      fontFamily: 'Helvetica',
       backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`,
       height: '500px',
-      width: '1px',
-      float: 'center',
+      width: '20px',
+
       }
   }
 
   colorChange = () => {
     this.setState({
+      
       style: {
         backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`,
-        height: `${Math.floor(Math.random() * 1000)}` + 'px',
+        height: `${Math.floor(Math.random() * 10000)}` + 'px',
+        // ${Math.floor(Math.random() * 30)}
         width: `${Math.floor(Math.random() * 30)}` + 'px',
-        float: 'center',
-        fontFamily: 'Helvetica',
+        border: '1px  solid red',
+        borderRadius: '20%',
       }
     })
-    console.log(this.style.width)
 }
 
 
@@ -33,7 +33,7 @@ class Pixel extends React.Component {
     return (
 
 
-      <div onMouseOver={this.colorChange} style={this.state.style}></div>
+      <div className="spin" onMouseOver={this.colorChange} style={this.state.style}></div>
       
     )
   }
