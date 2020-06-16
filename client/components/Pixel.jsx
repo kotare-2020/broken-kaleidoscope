@@ -15,6 +15,7 @@ class Pixel extends React.Component {
       }
   }
 
+  
   colorChange = () => {
     this.setState({
       
@@ -28,10 +29,11 @@ class Pixel extends React.Component {
         position: 'sticky',
       }
     })
-}
-
-
+  }
+  
+  
   render() {
+    {setTimeout(this.colorChange, 200)}
 
     return (
 

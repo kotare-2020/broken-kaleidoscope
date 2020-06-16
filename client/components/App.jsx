@@ -6,7 +6,7 @@ class App extends React.Component {
   
   render() {
     var arr = []
-    {for (var i = 0; i < 80; i++) {
+    {for (var i = 0; i < 20; i++) {
       arr.push(<Pixel/>)
     }}
   return (
