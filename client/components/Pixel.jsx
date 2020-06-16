@@ -9,15 +9,20 @@ class Pixel extends React.Component {
         super(props)
         this.state = {
             fontFamily: 'monospace',
-            height: '15px',
-            width: '15px',
+            height: '20px',
+            width: '20px',
             backgroundColor: randomHexColor()
         }
     }
+    // componentWillMount() {
+    //     setInterval(() => {
+    //         this.setState = setInterval(randomHexColor, 3000)}
+    //     )}
 
-    componentDidMount() {
-        this.setState = setInterval(randomHexColor, 3000)
-    }
+    componentDidMount = function() {
+        var intervalId = setInterval(this.clickHandler, 3000);
+        this.setState({intervalId: intervalId});
+     }
 
     clickHandler = () => {
         this.setState({
@@ -40,7 +45,7 @@ class Pixel extends React.Component {
     render() {
         return (
             <div style={this.state} draggable="true" onClick={this.clickHandler} onDragEnter={() => {
-                setTimeout(this.dragEnter, 3000)
+                setTimeout(this.dragEnter, 500)
             }} onMouseEnter={this.mouseEnter}>
             </div>
         )
