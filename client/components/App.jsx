@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Pixels amount='200' />
+        <Pixels amount='2500' />
       </>
     )
   }
