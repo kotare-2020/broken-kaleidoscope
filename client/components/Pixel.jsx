@@ -8,21 +8,16 @@ class Pixel extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            fontFamily: 'monospace',
             height: '20px',
             width: '20px',
             backgroundColor: randomHexColor()
         }
     }
-    // componentWillMount() {
-    //     setInterval(() => {
-    //         this.setState = setInterval(randomHexColor, 3000)}
-    //     )}
 
-    componentDidMount = function() {
+    componentDidMount = function () {
         var intervalId = setInterval(this.clickHandler, 3000);
-        this.setState({intervalId: intervalId});
-     }
+        this.setState({ intervalId: intervalId });
+    }
 
     clickHandler = () => {
         this.setState({
