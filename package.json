@@ -28,7 +28,8 @@
     ]
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "webpac": "0.0.1-security"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
