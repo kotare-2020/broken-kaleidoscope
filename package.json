@@ -2,7 +2,10 @@
   "name": "broken-kaleidoscope",
   "version": "0.1.0",
   "description": "Playing with random colours and React state.",
-  "repository": "https://github.com/dev-academy-challenges/broken-kaleidoscope",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-academy-challenges/broken-kaleidoscope.git"
+  },
   "main": "server/index.js",
   "author": "EDA",
   "license": "ISC",
@@ -47,5 +50,13 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dev-academy-challenges/broken-kaleidoscope/issues"
+  },
+  "homepage": "https://github.com/dev-academy-challenges/broken-kaleidoscope#readme",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": []
 }
