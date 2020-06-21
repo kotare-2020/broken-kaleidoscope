@@ -1,5 +1,6 @@
 html, body, .viewport {
   margin: 0;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .App {
@@ -8,11 +9,28 @@ html, body, .viewport {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1000px;
-
-
+  text-align: center;
 }
 
 body {
   display: flex;
   justify-content: center;
+}
+
+.appStyling {
+  margin-top: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  text-align: center;
+}
+
+.titles_Kale {
+  display: flex;
+  justify-content: space-between;
+}
+
+.LandingPage {
+  font-size: 2rem;
 }

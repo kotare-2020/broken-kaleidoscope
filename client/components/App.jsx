@@ -1,14 +1,27 @@
 import React from 'react'
-import Pixel from './Pixel'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import Kaleidoscope from './Kaleidoscope'
+import LandingPage from './LandingPage'
 
 const App = () => {
   return (
-    <div className="App">
-   {Array.from({length: 500}, (v, i) => <Pixel/>)}
-    </div>
+    <Router>
+      <div className="appStyling">
+      
+      <Route exact path="/" component={LandingPage} />
+      
+      </div>
+
+      <Route path="/kaleidoscope" component={Kaleidoscope} />
+
+      
+      
+
+    </Router>
   )
 }
 
 
 
 export default App
+ 
