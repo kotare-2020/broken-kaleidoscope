@@ -3,26 +3,12 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <>
-    <div>React development has begun!</div>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    </>
+    <div className="App">
+   {Array.from({length: 500}, (v, i) => <Pixel/>)}
+    </div>
   )
 }
+
+
 
 export default App
